@@ -13,8 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<modules>
-		<module>contacts-webapp</module>
-		<module>contacts-client-docker</module>
+		
+		
 		<module>contacts-service</module>
 	</modules>
 	<dependencies>
