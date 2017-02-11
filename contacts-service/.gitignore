@@ -1,0 +1,7 @@
+.settings
+target
+.classpath
+.project
+*.log
+.idea
+contacts-service.iml

@@ -1,0 +1,34 @@
+{
+	"name": "contacts-webapp",
+	"version": "0.0.0",
+	"description": "A starter project for AngularJS combined with java and maven",
+	"keywords": [
+		"java",
+		"maven",
+		"angularjs",
+		"seed"
+	],
+	"authors": [
+		"Miguel Rodriguez <mrodriguez@kenzan.com>"
+	],
+	"license": "Apache 2.0",
+	"homepage": "https://github.com/cmrodriguez/cmrodriguez.github.io/wiki",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"src/main/webapp/vendor",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular-animate": "1.3.0-beta.14",
+		"angular-loader": "1.3.0-beta.14",
+		"angular-mocks": "1.3.0-beta.14",
+		"angular-route": "1.3.0-beta.14",
+		"angular": "1.3.0-beta.14",
+		"bootstrap": "^3.3.7"
+	},
+	"main": "src/main/webapp/index.html"
+}

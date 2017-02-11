@@ -1,0 +1,10 @@
+{
+    "filesToWatch": "/home/m/Code/Strategy/Microservices/contacts/contacts-webapp/src/main/webapp/./**",
+    "directoryToWatch": "/home/m/Code/Strategy/Microservices/contacts/contacts-webapp/src/main/webapp/.",
+    "projectRootPath": "/home/m/Code/Strategy/Microservices/contacts/contacts-webapp",
+    "targetPath": "/home/m/Code/Strategy/Microservices/contacts/contacts-webapp/target",
+    "sourceDirectory": "src/main/webapp",
+    "jsSourceDirectory": ".",
+    "warTargetDirectory": ".",
+    "filteredFiles": ["**/node_modules.tar", "maven-properties.json"]
+}

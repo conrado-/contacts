@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>io.github.miguelrf</groupId>
+		<artifactId>contacts</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>contacts-client-docker</artifactId>
+	<packaging>war</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.10</version>
+				<executions>
+					<execution>
+						<id>build-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+						<configuration>
+							<imageName>foo/foo2:${project.version}</imageName>
+							<dockerDirectory>${project.basedir}/docker</dockerDirectory>
+						</configuration>
+					</execution>
+					<execution>
+						<id>tag-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>tag</goal>
+						</goals>
+						<configuration>
+							<image>foo/foo2:${project.version}</image>
+							<newName>foo/foo2:latest</newName>
+							<dockerDirectory>${project.basedir}/docker</dockerDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,24 @@
+mongoDB:
+ host: localhost
+ port: 27017
+ databaseName: test
+ contactCollectionName: contacts
+# the only required property is resourcePackage, for more config options see below
+swagger:
+  resourcePackage: io.github.miguelrf.contacts.rest
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
+    - type: file
+      currentLogFilename: contacts.log
+      threshold: ALL
+      archive: true
+      archivedLogFilenamePattern: contacts-%d.log
+      archivedFileCount: 5
+      timeZone: UTC
+      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"

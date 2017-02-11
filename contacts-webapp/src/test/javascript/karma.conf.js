@@ -1,0 +1,32 @@
+module.exports = function(config){
+  config.set({
+
+    basePath : '../../../',
+
+    files : [
+      'src/main/javascript/vendor/angular**/**.min.js',
+      'src/main/javascript/vendor/angular-mocks/angular-mocks.js',
+      'src/main/javascript/js/**/*.js',
+      'src/test/javascript/unit/**/*.js'
+    ],
+
+    autoWatch : true,
+
+    frameworks: ['jasmine'],
+
+    browsers : ['Chrome'],
+
+    plugins : [
+            'karma-chrome-launcher',
+            'karma-firefox-launcher',
+            'karma-jasmine',
+            'karma-junit-reporter'
+            ],
+
+    junitReporter : {
+      outputFile: 'target/test_out/unit.xml',
+      suite: 'src/test/javascript/unit'
+    }
+
+  });
+};
